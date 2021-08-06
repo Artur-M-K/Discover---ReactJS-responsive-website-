@@ -52,7 +52,7 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
@@ -104,6 +104,12 @@
 
 .menu-icon {
     display: none;
+}
+
+@media screen and (max-width: 1280px) {
+ .nav-menu {
+     width: 40vw;
+ }
 }
 
 @media screen and (max-width: 960px) {

@@ -7,20 +7,21 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.home,
+
 .services,
-.products
+.products,
+.about
  {
     display: flex;
-    height: 100vh;
+    min-height: 100%;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    /* position: relative; */
-}
+    text-shadow: 2px 4px 1px #000000;
+ } 
 
 .services {
-    background-image: url("../src/images/img-2.jpg");
+    background-image: url("../src/images/services.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,7 +30,7 @@
 }
 
 .products {
-    background-image: url("../src/images/img-7.jpg");
+    background-image: url("../src/images/products.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,18 +38,24 @@
     font-size: 100px;
 }
 
-/* .sign-up {
-    background-image: url("../src/images/img-8.jpg");
+.about {
+    background-image: url("../src/images/about.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
     font-size: 100px;
-} */
+}
+
+.wrapper-body {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
 
 .container-login {
     position: relative;
-    background-image: url("../src/images/img-8.jpg");
+    background-image: url('../src/images/login.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -59,22 +66,42 @@
 .wrapper-login {
     position: absolute;
     width: 30%;
-    height: 65%;
+    max-height: 65%;
     background: #fff;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.wrapper-login a {
+    float: right;
+    margin: 20px;
+    background-color: #000;
+}
+
+.submit {
+    width: 100%;
+    height: 90px;
+    background: #000;
+    border-radius: 0 0 5px 5px;
 }
 
 .sign-up {
-    margin: 20px 0;
+    padding: 20px 0;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
 }
 
 .form-login {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 30px 0;
     
 }
 
@@ -91,10 +118,155 @@ label {
 
 input {
     width: 90%;
-    height: 40px;
+    height: 50px;
     border: none;
+    border-bottom: 1px solid black;
     border-radius: 5px;
+    padding-left: 20px;
+}
 
+input:focus {
+    border: 1px solid rgb(180, 180, 180);
+    outline: none;
+}
+
+.item-body,
+.item-body-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.item-body {
+    margin: 80px 0;
+}
+
+.item-body-products {
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.item-body-about {
+    width: 48%;
+    margin: 35px 10px;
+    padding: 30px 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+    border-radius: 10px;
+}
+
+.item-body-about h3 {
+    padding: 10px 0;
+    font-size: 36px;
+    border-bottom: 2px solid rgb(180, 180, 180);
+}
+
+.item-body-about p {
+    padding: 40px 10px 20px;
+    font-size: 22px;
+}
+
+.item-body-about ul {
+    padding: 30px;
+    list-style: none;
+}
+.item-body-about li {
+    padding-top: 10px;
+    font-size: 22px;
+}
+
+.products-info,
+.products-img {
+    width: 40%;
+    margin-top: 40px;
+    padding: 30px 30px;
+}
+
+.products-info {
+    margin-left: 10%;
+}
+
+.products-img img {
+    margin: 0 20%;
+}
+
+.products-info h2 {
+    font-size: 50px;
+}
+.products-info h3 {
+    font-size: 32px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.products-info p {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .item-body-products {
+        width: 80%;
+        margin: 0;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .products-info,
+    .products-img {
+    width: 70%;
+    margin-top: 40px;
+    
+    }
+
+    .products-img img {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    
+    .form-login {
+        flex: 1;
+    }
+    .wrapper-login {
+        width: 50%;
+        max-height: 150vh;
+        margin-top: 60px;
+        justify-content: flex-start;
+    }
+    .wrapper-login h1 {
+        font-size: 40px;
+    }
+
+    .item-body-products {
+        margin: 0 auto;
+        width: 90%
+    }
+
+    .products-info {
+        margin-left: 0;
+    }
+
+    .products-img img {
+        width: 30vw;
+    }
+
+    .products-info h2 {
+        font-size: 35px;
+    }
+    .products-info h3 {
+        font-size: 24px;
+        font-weight: 200;
+        font-style: italic;
+    }
+    
+    .products-info p {
+        font-size: 18px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
 }
 
 @media screen and (min-width: 640px) {
@@ -103,15 +275,83 @@ input {
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
     .services,
     .products,
-    .sign-up {
+    .about
+    {
         font-size: 60px;
+    }
+
+    .item-body-products {
+        margin: 0 auto;
+        width: 90%
+    }
+
+    .wrapper-body .header h1 {
+        font-size: 44px;
+        line-height: 80px;
+        
+    }
+
+    .container-login {
+        margin-top: 0;
+        height: 100vh;
+    }
+
+    .wrapper-login {
+        width: 100%;
+        height: 75%;
+        margin-top: 20px;
+    }
+
+    .form-item label {
+        margin-right: 20px;
     }
 
     #root {
         width: 100vw;
         overflow-x: hidden;
+    }
+
+    .item-body-about {
+        width: 80%;
+    }
+
+    .item-body-about p,
+    .item-body-about li{
+        font-size: 18px;
+    }
+
+    .products-img {
+        display: none;
+    }
+
+    .products-info {
+        width: 90%;
+        padding: 15px 0;
+        margin-left: 0;
+    }
+
+    .products-info h2 {
+        font-size: 35px;
+    }
+    .products-info h3 {
+        font-size: 24px;
+        font-weight: 200;
+        font-style: italic;
+    }
+    
+    .products-info p {
+        font-size: 18px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+}
+
+@media screen and (max-height: 480px) {
+    .container-login {
+        height: 170vh;
     }
 }
