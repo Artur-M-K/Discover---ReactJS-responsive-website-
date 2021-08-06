@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home,
+.services,
+.products
+ {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    /* position: relative; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.services {
+    background-image: url("../src/images/img-2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.products {
+    background-image: url("../src/images/img-7.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+/* .sign-up {
+    background-image: url("../src/images/img-8.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+} */
+
+.container-login {
+    position: relative;
+    background-image: url("../src/images/img-8.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper-login {
+    position: absolute;
+    width: 30%;
+    height: 65%;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+
+.sign-up {
+    margin: 20px 0;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.form-item {
+    width: 100%;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+label {
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+input {
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+@media screen and (min-width: 640px) {
+    #root {
+        overflow-x: auto;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .services,
+    .products,
+    .sign-up {
+        font-size: 60px;
+    }
+
+    #root {
+        width: 100vw;
+        overflow-x: hidden;
+    }
 }
