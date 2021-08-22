@@ -16,7 +16,7 @@ To run this project, install it locally using npm:
 
 ```
 $ git clone https://github.com/Artur-M-K/Discover---ReactJS-responsive-website-.git
-$ cd Currency-Calculator
+$ cd Discover---ReactJS-responsive-website-
 $ npm install
 $ npm start
 ```
