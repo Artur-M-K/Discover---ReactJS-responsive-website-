@@ -205,6 +205,7 @@ input:focus {
     padding-left: 20px;
 }
 
+
 @media screen and (max-width: 1200px) {
     .item-body-products {
         width: 80%;
