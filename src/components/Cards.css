@@ -101,11 +101,6 @@ box-shadow: inset 0px 0px 0px 0px rgba(0,0,0,0)
   .cards--item--pic-wrap:hover.cards--item--pic-wrap::after{
     bottom: 0;
   }
-
-  /* .cards--item--img:hover .cards--item--pic-wrap { 
-    -webkit-box-shadow: inset 1px 1px 45px 7px #000000; 
-box-shadow: inset 1px 1px 45px 7px #000000;
-  } */
   
   .cards--item--info {
     padding: 20px 30px 30px;
